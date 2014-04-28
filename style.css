@@ -1,0 +1,249 @@
+/*		Utilities		*/
+.center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.greenButton {
+	background-color: #f1c40f;
+	padding: 10px;
+	margin: 0;
+	border: 3px solid #f1c40f;
+	border-bottom:3px solid #f1c40f;
+	border-radius: 15px;
+}
+
+.formTable {
+	width: 100%;
+	margin: 20px 0px 20px 0px;
+	/*background:red;*/
+}
+
+.formTable tr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.formTable td {
+	width: 40%;
+	padding: 0px 10px 0px 10px;
+}
+
+.formDataLeft {
+	text-align: right;
+}
+.formDataright {
+	text-align: left;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.warningMessage {
+	text-align: center;
+	font-weight: 500;
+	color: red;
+}
+
+.guideMessage {
+	text-align: center;
+	font-weight: 500;
+	color: #27ae60;
+}
+
+
+/*		Global attributes		*/
+html {
+	font-family: 'Cuprum', sans-serif;
+	font-weight: 400;
+	color: #555;
+}
+
+h1 {
+	font-family: 'Pacifico';
+}
+
+a {
+	text-decoration: none;
+	color: #3498db;
+}
+a:hover {
+	color: #e67e22;
+}
+
+
+/*		Elements in header.php		*/
+body {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+	/*background-color: #acd831;*/
+}
+
+.headerimg {
+	width: 200px;
+	height: 200px;
+}
+
+nav {
+	text-align: center;
+}
+
+.navBlock {
+	display: inline-block;
+	margin: 0 auto;
+	/*background-color: #c11;*/
+}
+
+a#open-tasks {
+	padding: 10px;
+}
+
+a#open-settings {
+	padding: 10px;
+}
+
+nav ul {
+	margin: 10px;
+	padding: 0;
+}
+
+nav li {
+	width: 130px;
+	display: inline-block;
+	font-family: 'Verdana', cursive;
+	/*background-color: #aa1;*/
+}
+
+
+/*		Elements in index.php and other content pages		*/
+.sect {
+	width: 50%;
+	display: block;
+	overflow: hidden;
+	/*background-color: #bc1;*/
+}
+
+form {
+	line-height: 2.5em;
+}
+
+form .pic {
+	margin-left: 20px;
+}
+
+.profilePic {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+.profilePicBig {
+	width: 100px;
+	height: 100px;
+	vertical-align: middle;
+}
+
+
+/*		Elements in app.php		*/
+#taskSide {
+	padding-top: 20px;
+	width: 200px;
+	display: inline-block;
+	float: left;
+	text-align: center;
+	/*background-color: #97c;*/
+}
+
+.addtaskdiv form {
+	padding-top: 30px;
+}
+
+.addtaskdiv label {
+	margin: 0 auto;
+	padding: 0px;
+}
+
+.addtaskdiv input {
+	margin: 0 auto;
+}
+
+.addtaskButton {
+	width: 100px;
+	padding: 20px;
+	margin: 0 50px 10px 50px;
+}
+
+#taskMain {
+	width: 800px;
+	display: inline-block;
+	float: right;
+	/*background-color: #37c;*/
+}
+
+#taskMain  h2{
+	font-size: 1.3em;
+	margin: 0px;
+}
+
+#taskMain p {
+	margin: 0px 0px 10px 0px;
+}
+
+/*		Elements in displayTask.php		*/
+.taskWidget {
+	width: 100%;
+	padding: 20px;
+}
+
+.taskBoxes {
+	display: inline-block;
+}
+
+.taskTitle {
+
+}
+
+.taskBox {
+	width: 25px;
+	height: 25px;
+	padding: 2px;
+	margin: 0px;
+	display: inline-block;
+	border: 1px solid #777;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.taskBox a {
+	color: #08FFB9;
+	text-decoration: none;
+}
+
+.taskCom {
+	background-color: #3498db;
+}
+
+.taskClick {
+	background-color: #be0;
+}
+
+.taskNorm {
+	/*background-color: blue;*/
+}
+
+/*		Elements in footer.php		*/
+footer {
+	width: 1000px;
+	float: left;
+	margin-top: 50px;
+	border-top: 1px dotted #555;
+}

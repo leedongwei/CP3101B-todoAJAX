@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" 	content="A simple to-do manager for tasks that can be broken down into easy well-understood chunks">
+		<meta name="keywords" 		content="to-do manager">
+
+		<title>
+			I Have 3101 Things To Do!
+		</title>
+		
+		<!-- Normalize.css -->
+		<link href="normalize.css" rel="stylesheet">
+		
+		<!-- Custom styles for this template -->
+		<link href="style.css" rel="stylesheet">
+		
+		
+		<script src="lib/jquery-2.1.0.js"></script>
+		<script src="lib/controller.js"></script>
+	</head>
+	<body>
+		
+		<header>
+			<a href="index.html"><img class="headerimg center" src="img/logo.png" alt="I Have 3101 Things To Do!"></a>
+		</header>
+		<nav>
+			<div class="navBlock" id="navbar-login">
+				<ul>
+					<li><button id="open-signup" class="greenButton" type="button">Sign up!</button></li>
+				</ul>
+			</div>
+			<div class="navBlock" id="navbar-tasks">
+				<ul>
+					<li><a id="open-tasks">To-do List!</a> </li>
+					<li><a id="open-settings">Settings</a> </li>
+					<li> | </li>
+					<li><a id="logoutButton">Log Out</a> </li>
+				</ul>
+			</div>
+		</nav>
+	
+		<div id="view-login">
+			<section>
+				<div id="loginForm-Result" class="center"> 
+					<br><br><br>
+				</div>
+				<form id="loginForm" class="center" name="loginForm" method="post" action="">
+					<input id="username" name="username" type="text" placeholder="Username" >
+					<br>
+					<input id="password" name="password" type="password" placeholder="Password">
+					<br>
+					<input id="loginButton" name="loginButton" type="button" value="Login!">
+					<input id="open-view-fp" name="open-view-forgetpass" type="button" value="Forget Password">
+				</form>
+				<br>
+				
+			</section>
+		</div>
+	
+		<div id="view-forgetpass">
+			<form id="forgetpassForm" name="forgetpassForm" method="post" action="">
+				<table class="formTable">
+					<tr>
+						<td class="formDataLeft"><label for="username">Username: </label></td>
+						<td><input id="forgetUsername" name="username" type="text" placeholder="Username"/></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"> </td>
+						<td><input id="forgetpassButton" name="forgetpassButton" type="button" value="Give me my password!"/></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"> </td>
+						<td><span id="forgetpassForm-Result"> </span></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		<div id="view-signup">
+			<form id="signupForm" name="signUpForm" method="post" action="signup.php">
+				<table class="formTable">
+					<tr>
+						<td class="formDataLeft"><label for="username">Username: </label></td>
+						<td><input id="signupUsername" name="signupUsername" type="text" required/></td>
+					</tr>
+					<tr>	
+						<td class="formDataLeft"><label for="password">Password: </label></td>
+						<td><input id="signupPassword" name="signupPassword" type="password" required/></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"><label for="confirmPassword">Confirm Password: </label></td>
+						<td><input id="signupCPassword" name="signupCPassword" type="password" required/> <span id="signupPasswordCheck"> </span></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"><p>&nbsp;</p></td>
+						<td><p>&nbsp;</p></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"><label for="pic">Profile Picture: </label></td>
+						<td>
+							<input name="signupPic" type="radio" value="1" class="pic" CHECKED="checked" /> <img src="img/0.jpg" class="profilePic">
+							<input name="signupPic" type="radio" value="2" class="pic" /> <img src="img/1.jpg" class="profilePic">
+							<input name="signupPic" type="radio" value="3" class="pic" /> <img src="img/2.jpg" class="profilePic">
+							<input name="signupPic" type="radio" value="4" class="pic" /> <img src="img/3.jpg" class="profilePic">
+						</td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"><label for="name">Your Name: </label></td>
+						<td><input id="signupName" name="signupName" type="text" required/></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"><label for="email">Your Email: </label></td>
+						<td><input id="signupEmail" name="signupEmail" type="email" required/> <span id="signupEmailCheck"> </span></td>
+					</tr>
+					<tr>
+						<td class="formDataLeft"></td>
+						<td><input id="signupButton" name="signupButton" type="button" value="Sign Up!" /> <span id="signup-Result"> </span></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	
+		<div id="view-settings">
+			<section>
+				<br>
+				<form id="newpasswordForm" name="newpasswordForm" action="" method="post">
+					<table class="formTable">
+						<tr>
+							<td class="formDataLeft">Username:</td>
+							<td><span id="setUserNameHolder"> </span></td>
+						<tr>
+							<td class="formDataLeft">Current password:</td>
+							<td><input id="setPass" name="setPass" type="password" required/></td>
+						</tr>
+						<tr>
+							<td class="formDataLeft">New Password:</td>
+							<td><input id="setNewPass" name="setNewPass" type="password" required/></td>
+						</tr>
+						<tr>
+							<td class="formDataLeft">Confirm Password:</td>
+							<td><input id="setCPass" name="setCPass" type="password" required/> <span id="setNewPassCheck"> </span></td>
+						</tr>
+						<tr>
+							<td class="formDataLeft"></td>
+							<td><input id="setNewPassButton" name="setNewPassButton" type="button" value="Change my password!" /> <span id="setNewPass-Result"> </span></td>
+						</tr>
+					</table>
+				</form>
+			</section>
+			
+			<hr width="90%" />
+		
+			<section>
+				<br><br>
+				<form id="newSettingForm" name="newSettingForm" action="" method="post">
+					<table class="formTable">
+						<tr>
+							<td class="formDataLeft"><label for="pic">Profile Picture: </label></td>
+							<td>
+								<input name="setPic" type="radio" value="0" class="pic" CHECKED='checked' /> <img src="img/0.jpg" class="profilePic">
+								<input name="setPic" type="radio" value="1" class="pic"/> <img src="img/1.jpg" class="profilePic">
+								<input name="setPic" type="radio" value="2" class="pic"/> <img src="img/2.jpg" class="profilePic">
+								<input name="setPic" type="radio" value="3" class="pic"/> <img src="img/3.jpg" class="profilePic">
+							</td>
+						</tr>
+						<tr>
+							<td class="formDataLeft"><label for="name">Your Name: </label></td>
+							<td><input id="setName" name="setName" type="text" value="" required/></td>
+						</tr>
+						<tr>
+							<td class="formDataLeft"><label for="email">Your Email: </label></td>
+							<td><input id="setEmail" name="setEmail" type="email" value="" required/> <span id="setInfoEmailCheck"> </span></td>
+						</tr>
+						<tr>
+							<td class="formDataLeft"></td>
+							<td><input id="setInfoButton" name="setInfoButton" type="button" value="Update my settings!" /> <span id="setInfo-Result"> </span></td>
+						</tr>
+					</table>
+				</form>
+			</section>
+		</div>
+		
+		<div id="view-tasks">
+			<aside id="taskSide">
+				<img id="welcomePic" src="" class="profilePicBig center">
+				<p>Welcome back, <span id="welcomeMsg"> </span>!</p>
+				
+				<p>Statistics: <br>
+				Completed <span id="stats">0</span> hours/day</p>
+				
+				<div class="addtaskdiv">
+					<form id="addtaskForm" name="addtask" action="" method="post">
+						<input id="stats-tracker" type="hidden" value="0" />
+						<input id="addtaskname" name="addtaskname" type="text" placeholder="New Task Name" size="21"/>
+						<br>
+						Duration <input id="addtasktime" name="addtasktime" type="number" placeholder="Units of 0.5 hours" size="12"/>
+						
+						<span id="addtask-Result"><br><br> </span>
+						<input id="addtaskButton" name="addtaskButton" type="button" value="Create New To-Do!" />
+					
+					</form>
+				</div>
+			</aside>
+			<section id="taskMain">
+
+			</section>
+		</div>
+		
+		<footer>
+			<p class="pull-right"><small>Made for CP3101B Assignment 2</small></p>
+		</footer>
+	</body>
+</html>
